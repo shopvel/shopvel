@@ -5,7 +5,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/shopvel/shopvel/v/unstable)](https://packagist.org/packages/shopvel/shopvel)
 [![License](https://poser.pugx.org/shopvel/shopvel/license)](https://packagist.org/packages/shopvel/shopvel)
 
-The repository contains the web shop package for Laravel 5 integrating the Shopvel eCommerce library into Laravel.
+Shopvel eCommerce - Powerfull open source eCommerce software built with laravel.
 
 ## Installation
 
