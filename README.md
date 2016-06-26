@@ -1,6 +1,6 @@
-<a href="https://shopvel.com/">
-    <img src="https://shopvel.com/assets/shopvel-logo.png" alt="Shopvel logo" title="Shopvel" align="left" height="60" />
-</a>
+<a href="http://shopvel.com/">
+    <img src="http://shopvel.com/assets/shopvel-logo.png" alt="Shopvel logo" title="Shopvel" align="left" height="60" />
+</a><br />
 
 # Shopvel eCommerce
 
