@@ -9,7 +9,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/shopvel/shopvel/v/unstable)](https://packagist.org/packages/shopvel/shopvel)
 [![License](https://poser.pugx.org/shopvel/shopvel/license)](https://packagist.org/packages/shopvel/shopvel)
 
-Shopvel eCommerce - Powerfull open source eCommerce software built with laravel.
+Shopvel eCommerce - Powerfull Open Source eCommerce Software - Built with Laravel 5.
 
 ## Installation
 
