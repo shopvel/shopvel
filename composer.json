@@ -1,0 +1,19 @@
+{
+  "name": "shopvel/shopvel",
+  "description": "Shopvel eCommerce",
+  "keywords": ["ecommerce", "shopvel"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.5.9",
+    "laravel/framework": "5.2.*"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "Shopvel\\": "core/"
+    }
+  }
+}
