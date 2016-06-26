@@ -1,3 +1,7 @@
+<a href="https://shopvel.com/">
+    <img src="https://shopvel.com/assets/shopvel-logo.png" alt="Shopvel logo" title="Shopvel" align="left" height="60" />
+</a>
+
 # Shopvel eCommerce
 
 [![Latest Stable Version](https://poser.pugx.org/shopvel/shopvel/v/stable)](https://packagist.org/packages/shopvel/shopvel)
