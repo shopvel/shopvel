@@ -8,11 +8,17 @@ class AdminServiceProvider extends ServiceProvider
 {
     protected $namespace = 'Shopvel\Admin';
 
+    /**
+     * @param Router $router
+     */
     public function boot(Router $router)
     {
         parent::boot($router);
     }
 
+    /**
+     * @param Router $router
+     */
     public function map(Router $router)
     {
         $router->group([

@@ -8,11 +8,17 @@ class ShopServiceProvider extends ServiceProvider
 {
     protected $namespace = 'Shopvel\Shop';
 
+    /**
+     * @param Router $router
+     */
     public function boot(Router $router)
     {
         parent::boot($router);
     }
 
+    /**
+     * @param Router $router
+     */
     public function map(Router $router)
     {
         $router->group([

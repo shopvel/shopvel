@@ -7,6 +7,12 @@ class Theme
     public $assets;
     public $views;
 
+    /**
+     * Theme constructor.
+     * @param $theme
+     * @param null $assets
+     * @param null $views
+     */
     public function __construct($theme, $assets = null, $views = null)
     {
         $this->name = $theme;
@@ -14,6 +20,11 @@ class Theme
         $this->views = $views === null ? $theme : $views;
     }
 
+    /**
+     * @param $url
+     * @return string
+     * @throws ThemeException
+     */
     public function url($url){
 
         if (preg_match('/^((http(s?):)?\/\/)/i',$url)) {
