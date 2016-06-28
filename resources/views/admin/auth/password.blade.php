@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>{{ trans('admin/auth.get_new_password_head_title') }}</title>
+    <meta name="robots" content="noindex">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
     <link href="{{ Theme::url('css/style.css') }}" rel="stylesheet" type="text/css">
 </head>

@@ -14,6 +14,7 @@ return [
     'email_reset_description' => 'Click here to reset your password:',
     'reset' => 'Reset password',
 
+    'logout' => 'Logout',
     'login' => 'Login',
     'login_head_title' => 'Login',
     'login_error' => 'E-Mail or password invalid. Please try again.',

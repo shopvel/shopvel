@@ -14,6 +14,7 @@ return [
     'email_reset_description' => 'Hier klicken, um ein neues Passwort zu setzen:',
     'reset' => 'Passwort zurücksetzen',
 
+    'logout' => 'Abmelden',
     'login' => 'Anmelden',
     'login_head_title' => 'Anmelden',
     'login_error' => 'E-Mail-Adresse oder Passwort ungültigt. Bitte geben Sie die Zugangsdaten erneut ein.',

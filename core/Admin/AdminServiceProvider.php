@@ -40,7 +40,7 @@ class AdminServiceProvider extends ServiceProvider
                     \Auth::logout(); \Session::flush(); return redirect('/admin/login');
                 });
                 $router->get('/', function() {
-                    return 'Hello [Admin/Dashboard]';
+                    return view('master');
                 });
             });
 
