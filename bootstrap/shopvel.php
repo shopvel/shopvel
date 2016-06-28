@@ -1,4 +1,3 @@
-
 <?php
 define('SHOPVEL_VERSION', '0.1.2');
 

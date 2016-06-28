@@ -48,8 +48,8 @@ class CreateAdminCommand extends Command
     private function askPassword()
     {
         $password = $this->secret('Enter password');
-        if (strlen(trim($password)) < 5) {
-            $this->error('The Password must be at least 5.');
+        if (strlen(trim($password)) < 6) {
+            $this->error('The Password must be at least 6.');
             return $this->askPassword();
         }
         $passwordConfirmation = $this->secret('Enter password confirmation');

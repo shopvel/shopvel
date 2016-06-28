@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
-    mix.sass('admin.scss', 'public/assets/admin/css/style.css');
+    mix.less('admin.less', 'public/assets/admin/css/style.css');
 });

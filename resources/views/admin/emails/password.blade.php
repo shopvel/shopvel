@@ -1,0 +1,1 @@
+{{ trans('admin/auth.email_reset_description') }} {{ url('admin/reset-password/'.$token) }}

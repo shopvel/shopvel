@@ -1,4 +1,3 @@
-
 <?php
 return [
     /*
@@ -88,13 +87,13 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'email' => 'auth.emails.password',
+            'email' => 'emails.password',
             'table' => 'users_password_resets',
             'expire' => 60,
         ],
         'admins' => [
             'provider' => 'admins',
-            'email' => 'auth.emails.password',
+            'email' => 'emails.password',
             'table' => 'admins_password_resets',
             'expire' => 60,
         ],

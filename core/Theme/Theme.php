@@ -31,7 +31,7 @@ class Theme
             return $url;
         }
 
-        $fullUrl = 'assets/' . (empty($this->assets) ? '' : '/') . $this->assets . '/' . ltrim($url, '/');
+        $fullUrl = '/assets' . (empty($this->assets) ? '' : '/') . $this->assets . '/' . ltrim($url, '/');
         if (file_exists($fullPath = public_path($fullUrl))) {
             return $fullUrl;
         }
