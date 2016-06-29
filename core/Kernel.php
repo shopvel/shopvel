@@ -47,6 +47,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'theme' => \Shopvel\Theme\ThemeMiddleware::class,
+        'language' => \Shopvel\Language\LanguageMiddleware::class,
         'guest' => \Shopvel\Middleware\RedirectIfAuthenticated::class,
     ];
 }

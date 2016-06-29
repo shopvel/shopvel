@@ -60,6 +60,7 @@ a, a:hover {
   display: table;
   height: 100%;
   width: 100%;
+  min-width: 990px;
 
   #s-aside-toggle {
     width: 250px;
@@ -69,6 +70,39 @@ a, a:hover {
     position: relative;
     vertical-align: top;
     display: none;
+
+    #s-aside-toggle-inner {
+      padding: 30px 25px 25px 25px;
+
+      span {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: inline-block;
+        color: #fff;
+        opacity: .5;
+        font-size: 12px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0 0 25px 0;
+        padding: 0;
+
+        li {
+          line-height: 30px;
+          font-size: 15px;
+
+          a {
+            color: #fff;
+            opacity: .8;
+            text-decoration: none;
+          }
+          a:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
 
     #s-aside-toggle-close {
       position: absolute;
@@ -133,6 +167,61 @@ a, a:hover {
     height: 100%;
     vertical-align: top;
 
+    #s-content-container {
+      min-height: ~"calc(100% - 50px)";
+    }
+
+    footer {
+      height: 50px;
+      background: #eee;
+      position: relative;
+      font-size: 13px;
+      text-align: right;
+
+      #s-footer-language {
+        position: absolute;
+        line-height: 30px;
+        top: 10px;
+        right: 25px;
+        color: #555;
+      }
+
+      #s-footer-version {
+        position: absolute;
+        line-height: 30px;
+        top: 10px;
+        left: 25px;
+        color: #555;
+      }
+
+      ul {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline;
+          border-right: 1px solid #ddd;
+          padding-right: 6px;
+          margin-right: 4px;
+        }
+        li:first-child {
+          margin-left: 3px;
+        }
+        li:last-child {
+          border: 0;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #555;
+      }
+    }
+
     header {
       background: #f5f5f5;
       border-bottom: 1px solid #eee;
@@ -145,13 +234,12 @@ a, a:hover {
         margin: 0;
         padding: 0;
         font-size: 21px;
-        display: block;
+        float: left;
       }
       #s-header-links {
-        position: absolute;
         height: 20px;
-        top: 15px;
-        right: 25px;
+        margin-right: 25px;
+        float: right;
 
         ul {
           list-style: none;
@@ -163,6 +251,9 @@ a, a:hover {
             line-height: 20px;
             color: #555;
             font-size: 14px;
+            border-right: 1px solid #ddd;
+            padding-right: 6px;
+            margin-right: 4px;
 
             a {
               color: #555;
@@ -172,11 +263,20 @@ a, a:hover {
               line-height: 20px;
             }
           }
+          li:first-child {
+            margin-left: 3px;
+          }
+          li:last-child {
+            border: 0;
+            padding: 0;
+            margin: 0;
+          }
         }
       }
     }
 
     #s-breadcrumb {
+      background: #f5f5f5;
       height: 20px;
       line-height: 20px;
       border-bottom: 1px solid #efefef;

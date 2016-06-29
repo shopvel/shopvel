@@ -30,13 +30,15 @@ $ chmod -R 755 bootstrap/cache
 APP_THEME: Frontend theme name
 APP_LANG: Default language
 APP_LANG_FALLBACK: Fallback language
+APP_LANGUAGES: Available languages (comma seperated)
 APP_TIMEZONE: Default timezone
 ```
 
-4.) Create an admin user via artisan:
+4.) Run migration and create an admin user via artisan:
 > Note: Database connection required (.env file)!
 
 ```
+$ php artisan migrate
 $ php artisan shopvel:create-admin
 ```
 

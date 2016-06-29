@@ -55,6 +55,14 @@ return [
     |
     */
     'locale' => env('APP_LANG', 'en'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Available Application languages
+    |--------------------------------------------------------------------------
+    */
+    'locales' => env('APP_LANGUAGES', 'en'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -129,6 +137,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Shopvel\Theme\ThemeServiceProvider::class,
+        Shopvel\Language\LanguageServiceProvider::class,
         Shopvel\Admin\AdminServiceProvider::class,
         Shopvel\Shop\ShopServiceProvider::class,
     ],
@@ -173,6 +182,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Theme' => Shopvel\Theme\ThemeFacade::class
+        'Theme' => Shopvel\Theme\ThemeFacade::class,
+        'Language' => Shopvel\Language\LanguageFacade::class
     ],
 ];

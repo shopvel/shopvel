@@ -8,6 +8,16 @@ class AdminServiceProvider extends ServiceProvider
 {
     protected $namespace = 'Shopvel\Admin';
 
+    public function register()
+    {
+        $this->app->singleton('shopvel.admin', function(){
+            return new Admin();
+        });
+
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Admin', \Shopvel\Admin\AdminFacade::class);
+    }
+
     /**
      * @param Router $router
      */
@@ -23,7 +33,7 @@ class AdminServiceProvider extends ServiceProvider
     public function map(Router $router)
     {
         $router->group([
-            'namespace' => $this->namespace, 'prefix' => 'admin', 'middleware' => ['theme:admin', 'web']
+            'namespace' => $this->namespace, 'prefix' => 'admin', 'middleware' => ['theme:admin', 'web', 'language']
         ], function ($router) {
 
             $router->group(['middleware' => 'guest'], function($router) {
@@ -39,6 +49,8 @@ class AdminServiceProvider extends ServiceProvider
                 $router->get('logout', function(){
                     \Auth::logout(); \Session::flush(); return redirect('/admin/login');
                 });
+                $router->get('articles', 'Article\Article@getAll');
+                $router->get('article/add', 'Article\Article@getAdd');
                 $router->get('/', function() {
                     return view('master');
                 });

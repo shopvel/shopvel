@@ -36,7 +36,7 @@ class Theme
             return $fullUrl;
         }
 
-        $vendorUrl = 'assets/vendor/' . ltrim($url, '/');
+        $vendorUrl = '/assets/vendor/' . ltrim($url, '/');
         if (file_exists($fullPath = public_path($vendorUrl))) {
             return $vendorUrl;
         }
