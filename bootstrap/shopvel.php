@@ -37,7 +37,7 @@ $app->singleton(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Shopvel\Exceptions\Handler::class
+    Shopvel\Exception\Handler::class
 );
 /*
 |--------------------------------------------------------------------------

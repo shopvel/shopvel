@@ -59,11 +59,11 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Shopvel\Models\User::class,
+            'model' => Shopvel\Model\User\Frontend::class,
         ],
         'admins' => [
             'driver' => 'eloquent',
-            'model' => Shopvel\Models\Admin::class,
+            'model' => Shopvel\Model\User\Backend::class,
         ],
     ],
     /*

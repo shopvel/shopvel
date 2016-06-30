@@ -135,11 +135,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
-        Shopvel\Theme\ThemeServiceProvider::class,
-        Shopvel\Language\LanguageServiceProvider::class,
-        Shopvel\Admin\AdminServiceProvider::class,
-        Shopvel\Shop\ShopServiceProvider::class,
+        Shopvel\ServiceProvider\CoreServiceProvider::class
     ],
     /*
     |--------------------------------------------------------------------------
@@ -181,8 +177,6 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,
-        'Theme' => Shopvel\Theme\ThemeFacade::class,
-        'Language' => Shopvel\Language\LanguageFacade::class
+        'View' => Illuminate\Support\Facades\View::class
     ],
 ];
