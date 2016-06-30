@@ -34,8 +34,7 @@ class BackendServiceProvider extends ServiceProvider
 
     public function boot(Router $router)
     {
-        \Shopvel\Backend\Configure::config();
-        \Shopvel\Backend\Configure::menu();
+        $router->middleware('configure', \Shopvel\Middleware\ConfigureMiddleware::class);
 
         parent::boot($router);
         $this->map($router);
@@ -52,7 +51,8 @@ class BackendServiceProvider extends ServiceProvider
             'middleware' => [
                 'web',
                 'theme:backend',
-                'lang'
+                'lang',
+                'configure:backend'
             ]
         ], function (Router $router) {
 
