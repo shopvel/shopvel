@@ -14,42 +14,36 @@
                     <img src="{{ Theme::url('img/shopvel-icon.png') }}" alt="Shopvel Icon">
                 </div>
                 <ul>
+                    @foreach(Menu::get() as $menu)
                     <li>
-                       <a href="{{ URL::to('backend') }}" title="{{ trans('general.dashboard') }}">
-                           <i class="fa fa-dashboard"></i>
-                           {{ trans('backend/general.dashboard') }}
-                       </a>
-                    </li>
-                    <li>
-                        <a href="#" data-target="" title="{{ trans('general.customers') }}">
-                            <i class="fa fa-male"></i>
-                            {{ trans('backend/general.customers') }}
+                        <a href="@if(!isset($menu['url']))#@else{{ $menu['url'] }}@endif"
+                            @if(!isset($menu['url']))data-target="s-nav-{{ $menu['name'] }}"@endif title="{{ trans('general.customers') }}">
+                            @if(isset($menu['icon-class']))<i class="{{ $menu['icon-class'] }}"></i>@endif
+                            @if(isset($menu['label'])){{ $menu['label'] }}@endif
                         </a>
                     </li>
-                    <li>
-                        <a href="#" data-target="s-nav-articles" title="{{ trans('article.articles') }}">
-                            <i class="fa fa-cube"></i>
-                            {{ trans('backend/article.articles') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-target="" title="{{ trans('general.settings') }}">
-                            <i class="fa fa-cog"></i>
-                            {{ trans('backend/general.settings') }}
-                        </a>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             <div id="s-aside-toggle">
                 <div id="s-aside-toggle-close"><a href="#"><i class="fa fa-close"></i></a></div>
                 <div id="s-aside-toggle-inner">
-                    <div id="s-nav-articles" data="s-nav">
-                        <span>{{ trans('backend/general.navigation') }}</span>
-                        <ul>
-                            <li><a href="{{ URL::to('backend/c/article') }}" title="{{ trans('backend/general.show_all') }}">{{ trans('backend/general.show_all') }}</a></li>
-                            <li><a href="{{ URL::to('backend/c/article/a/add') }}" title="{{ trans('backend/article.add') }}">{{ trans('backend/article.add') }}</a></li>
-                        </ul>
-                    </div>
+                    @foreach(Menu::get() as $menu)
+                        @if(empty($menu['url']))
+                            <div id="s-nav-{{ $menu['name'] }}" data="s-nav">
+                                @foreach(Menu::getChildrens($menu['name']) as $childName => $childMenu)
+                                    @if(isset($childMenu['group']))
+                                        <span>{{ $childMenu['label'] }}</span>
+                                        <ul>
+                                            @foreach($childMenu['childrens'] as $child)
+                                                <li><a href="{{ $child['url'] }}" title="{{ $child['label'] }}">{{ $child['label'] }}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                @endforeach
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
             <div id="s-content">

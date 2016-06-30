@@ -13,27 +13,29 @@ class BackendServiceProvider extends ServiceProvider
     public function register()
     {
         define('SHOPVEL_VIEW', 'backend');
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
 
         /*
-         * Add singleton classes
+         * Add Component Admin
          */
+        $loader->alias('Admin', \Shopvel\Facade\AdminFacade::class);
         $this->app->singleton('shopvel.admin', function(){
             return new \Shopvel\Component\Admin\Admin();
         });
 
         /*
-         * Create aliases
+         * Add Component Menu
          */
-        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('Admin', \Shopvel\Facade\AdminFacade::class);
+        $loader->alias('Menu', \Shopvel\Facade\MenuFacade::class);
+        $this->app->singleton('shopvel.menu', function(){
+            return new \Shopvel\Component\Menu\Menu();
+        });
     }
 
     public function boot(Router $router)
     {
-        \Config::set('mail.from', [
-            'address' => env('MAIL_FROM_ADDRESS', null),
-            'name' => 'Shopvel eCommerce'
-        ]);
+        \Shopvel\Backend\Configure::config();
+        \Shopvel\Backend\Configure::menu();
 
         parent::boot($router);
         $this->map($router);
